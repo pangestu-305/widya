@@ -1,0 +1,61 @@
+/* Gaya Kustom untuk Hero Section */
+.hero-section {
+    background: url('../img/hero-bg.jpg') no-repeat center center/cover; /* Ganti dengan gambar latar belakang Anda */
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Gaya untuk Card Produk */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px; /* Atur tinggi gambar produk */
+    object-fit: cover; /* Pastikan gambar mengisi ruang dengan baik */
+}
+
+/* Gaya Tambahan */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Penyesuaian responsif */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 300px;
+    }
+}
